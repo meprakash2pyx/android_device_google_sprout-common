@@ -23,15 +23,15 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # kernel stuff
-TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
-TARGET_KERNEL_CONFIG := cyanogenmod_sprout_defconfig
+#TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
+#TARGET_KERNEL_CONFIG := cyanogenmod_sprout_defconfig
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 # KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin/
-KERNEL_TOOLCHAIN := /home/varunchitre15/cm13/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+#KERNEL_TOOLCHAIN := /home/varunchitre15/cm13/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/
+#KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
@@ -73,7 +73,6 @@ USE_MINIKIN := true
 MALLOC_SVELTE := true
 DEVICE_RESOLUTION := 480x854
 
-
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
@@ -81,9 +80,10 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
 
-TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_USERIMAGES_USE_EXT4:=true
+#TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
+#TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 USE_CAMERA_STUB := true
 
 # SELinux
